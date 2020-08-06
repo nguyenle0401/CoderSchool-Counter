@@ -52,13 +52,10 @@ function reducer(state = initialState, action) {
       break;
     case "CHANGECOLORBTN":
       const boxColors = state.boxColors;
-      boxColors[action.payload.index] = action.payload.color;
+      boxColors[action.payload.id] = action.payload.color;
       console.log("hihi",action.payload.color)
-      console.log("hehhe",action.payload.index)
-      return {
-        ...state,
-        boxColors: boxColors,
-      };
+      console.log("hihi",action.payload.number)
+      break;
     default:
       console.log("Default is here");
   }

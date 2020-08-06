@@ -29,12 +29,8 @@ function App() {
     dispatch({ type: "CHANGE_NUM_BOX", payload: e.target.value });
   };
 
- 
-  const boxColors = useSelector(state => state.boxColors);
-  const renderBoxes = () => {
-    
+   const renderBoxes = () => {
     let boxArray = [];
-
     for (let i = 0; i < count; i++) {
       boxArray.push(<Box number={i} />);
     }
